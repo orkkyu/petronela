@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <title>UAB „Petronela“</title>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css/styles.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+          <!-- FONTS 
+          -->
+          <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        </head>
+
+        <body>
+<div id="header2">
+                    <h1 id="header_logo">Petronela</h1>
+
+                    <span id="navbtnon" onclick="openNav()">&#9776;</span>
+        <div id="hmbrnav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Pagrindinis</a>
+            <a href="index.html">Patiekalai</a>
+            <a href="index.html">Užkandžiai</a>
+            <a href="index.html">Desertai</a>
+            
+            <div id="navkontaktai">
+              <div id="phoneiconnav" class="fa trys">&#xf095;</div>
+              <p class="navkontaktai">+370 655 57091</p>
+            </div>
+        </div>
+
+        <div id="headerkontaktai">
+          <div id="phoneicon" class="fa trys">&#xf095;</div>
+          <p class="hdrkontaktai">+370 655 57091</p>
+        </div>
+        
+
+
+                  </div>
+
+
+            <div class="header">
+                
+                <div class="inner-header flex innerhdr-col">
+                    
+                    <h1 class="hdr">Petronela</h1>
+                    <h2 class="subhdr">Kukli virtuvė, platus asortimentas!</h2>
+                </div>
+            
+                <!--Waves Container-->
+                <div>
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#f8eee7" />
+                        </g>
+                    </svg>
+                </div>
+                <!--Waves end-->
+            
+            </div>
+            <div class="content flex">
+                <p>cont block</p>
+            </div>
+
+
+
+
+
+            <footer>
+
+
+            </footer>
+
+            <script>
+
+/* HEADER SCROLL stuff
+*/
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+
+  var element = document.getElementById("header2");
+  var element2 = document.getElementById("header_logo");
+  var navcolor = document.getElementById("hmbrnav");
+  var kontaktaicolor = document.getElementById("headerkontaktai");
+  var phonecolor = document.getElementById("phoneicon");
+  var navbtncolor = document.getElementById("navbtnon");
+
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    element.classList.add("small");
+    element2.classList.add("small");
+    navcolor.classList.add("smol");
+    kontaktaicolor.classList.add("kntktcolor");
+    phonecolor.classList.add("phonecolor");
+    navbtncolor.classList.add("navbtncolor");
+  } else {
+    element.classList.remove("small");
+    element2.classList.remove("small");
+    navcolor.classList.remove("smol");
+    kontaktaicolor.classList.remove("kntktcolor");
+    phonecolor.classList.remove("phonecolor");
+    navbtncolor.classList.remove("navbtncolor");
+  }
+}
+
+/* BORGAR NAV stuff
+*/
+
+function openNav() {
+  document.getElementById("hmbrnav").style.transition = "0.5s";  
+  document.getElementById("hmbrnav").style.width = "100%";  
+}
+function closeNav() {
+  document.getElementById("hmbrnav").style.width = "0";
+}
+
+
+
+
+            </script>
+        </body>
+    
+</html>
