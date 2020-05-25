@@ -368,7 +368,7 @@ body, html {
       background-color: #967b59;
       overflow-x: hidden;
       overflow-y: hidden;
-      padding-top: 100px;
+      padding-top: 135px;
     }
 
     #svg-container {
@@ -387,9 +387,9 @@ body, html {
     }
     
     #hmbrnav a {
-      padding: 20px 10px 12px 10px;
+      padding: 10px 10px 10px 10px;
       text-decoration: none;
-      font-size: 2em;
+      font-size: 1.8em;
       color: #ecdccc;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -635,6 +635,20 @@ body, html {
     }
     h1.hdr {
       font-size: 60px;
+    }
+
+    .header-slideshow {
+      display: none;
+    }
+  
+    .header-slideshow,
+    .header-slideshow:after { 
+      display: none;
+    }
+    
+    .header-slideshow li span { 
+      display: none;
+        animation: none; 
     }
   }
 
@@ -1225,7 +1239,33 @@ color: #fff;
   opacity: 0.8;
   }
 
+  .about-wave1 {
+    height: 150px; 
+    overflow: hidden;
+  }
 
+  .about-wave2 {
+    height: 150px; 
+    overflow: hidden;
+    margin-top: -1px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .text-container-about {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .text-container-about {
+      width: 100%;
+      background-color: #967a59c4;
+    }
+
+    #about-header {
+      background-color: initial;
+    }
+  }
 
 
   /***********************************************
@@ -1464,7 +1504,8 @@ color: #fff;
     .footer-nav a {
       display: flex;
       flex-direction: row;
-      margin: 0% 10px 0% 10px;
+      margin: 2px 10px 2px 10px;
+      padding: 10px;
       text-decoration: none;
       font-size: 18px;
       color: #fff;
@@ -1486,6 +1527,7 @@ color: #fff;
 
     .footer-logo {
       margin-bottom: 5%;
+      text-align: center;
     }
     
     .footer-copyright {
