@@ -3,6 +3,7 @@
     <title>UAB „Petronela“</title>
 
     <head>
+      <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="css/styles.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -76,7 +77,7 @@
             
             <div id="navkontaktai">
               <div id="phoneiconnav" class="fa trys">&#xf095;</div>
-              <p class="navkontaktai">+370 655 57091</p>
+              <a class="navkontaktai" href="tel:+370 655 57091">+370 655 57091</a>
             </div>
         </div>
 <!--</div>-->
@@ -84,7 +85,7 @@
 </div>
         <div id="headerkontaktai">
           <div id="phoneicon" class="fa trys">&#xf095;</div>
-          <p class="hdrkontaktai">+370 655 57091</p>
+          <a class="hdrkontaktai" href="tel:+370 655 57091">+370 655 57091</a>
         </div>
         
                   </div>
@@ -411,10 +412,53 @@
   </div>
 
 
+  <hr class="menu-divider map"></hr>
+
+
+<div class="contacts-map-container">
+    <div class="map-styling">
+      <iframe class="map-style" src="https://www.google.com/maps/d/u/2/embed?mid=16SjPws83HQQLP8Tu85OmYcO6e-tpjs3Y" width="640" height="480">
+      </iframe>
+    </div>
+
+</div>
 
 
 </section>
-           
+    
+
+<button onclick="topFunction()" id="topbutton" title="Į viršų">
+
+  <div class="topbutton-row">
+    <div class="topsvg-left">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 109.95 350">
+      <defs>
+        <path d="M0 120.02C0 159.03 15.32 192.37 36.65 204.8C36.65 232.52 36.65 454.27 36.65 481.99C36.65 498.54 44.87 512 54.98 512C65.08 512 73.3 498.54 73.3 481.99C73.3 454.27 73.3 232.52 73.3 204.8C94.63 192.37 109.95 159.03 109.95 120.02C109.95 71.2 86.31 0 54.98 0C23.65 0 0 71.23 0 120.02Z" id="b195EJFec2"/>
+      </defs>
+      <use xlink:href="#b195EJFec2" opacity="1" fill="#000000" fill-opacity="1"/>
+      <use xlink:href="#b195EJFec2" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"/>
+    </svg>
+  </div>
+
+ <div class="topsvg-right">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 109.95 350">
+      <defs>
+        <path d="M82.46 15.01C82.46 22.01 82.46 57.01 82.46 120.03L64.14 120.03C64.14 57.01 64.14 22 64.14 15C64.14 6.72 60.04 0 54.97 0C49.91 0 45.81 6.72 45.81 15C45.81 22 45.81 57.01 45.81 120.03L27.49 120.03C27.49 57.01 27.49 22.01 27.49 15.01C27.49 6.72 23.38 0 18.32 0C13.26 0 9.16 6.72 9.16 15.01C9.16 30.01 9.16 150.03 9.16 165.03C9.16 189.85 21.49 210.04 36.65 210.04C36.65 237.24 36.65 454.8 36.65 481.99C36.65 498.54 44.87 512 54.97 512C65.08 512 73.3 498.54 73.3 481.99C73.3 454.8 73.3 237.24 73.3 210.04C88.46 210.04 100.79 189.85 100.79 165.03C100.79 150.03 100.79 30.01 100.79 15.01C100.79 6.72 96.69 0 91.63 0C86.57 0 82.46 6.72 82.46 15.01Z" id="c55F0RFrOm"/>
+      </defs>
+      <use xlink:href="#c55F0RFrOm" opacity="1" fill="#000000" fill-opacity="1"/>
+      <use xlink:href="#c55F0RFrOm" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"/>
+    </svg>
+  </div>
+  </div>
+  
+  <div class="topbutton-text">
+    <p class="topbutton">Į viršų</p>
+  </div>
+  
+
+ 
+</button>
+
 
 <!--Waves Container-->
 <div id="#footer-waves">
@@ -434,7 +478,7 @@
             
             <a id="nav-icon-footer2" href="#about-header">Apie mus</a>
             <a id="nav-icon-footer3" href="index.html">Galerija</a>
-            <a id="nav-icon-footer4" href="index.html">Kontaktai</a>
+            <a id="nav-icon-footer4" href="#contacts-header-container">Kontaktai</a>
 
               </div>
               <div class="footer-social">
@@ -455,15 +499,21 @@
 
             <script>
 
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 /* HEADER SCROLL stuff
 */
-
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 
+var topbutton = document.getElementById("topbutton");
+
   var element = document.getElementById("header2");
   var element2 = document.getElementById("header_logo");
- // var navposition = document.getElementById("nav-cont");
   var navcolor = document.getElementById("hmbrnav");
   var kontaktaicolor = document.getElementById("headerkontaktai");
   var phonecolor = document.getElementById("phoneicon");
@@ -475,7 +525,6 @@ function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     element.classList.add("small");
     element2.classList.add("small");
-   // navposition.classList.add("small");
     navcolor.classList.add("smol");
     kontaktaicolor.classList.add("kntktcolor");
     phonecolor.classList.add("phonecolor");
@@ -484,10 +533,12 @@ function scrollFunction() {
     icon1.classList.add("scroll");
     icon2.classList.add("scroll");
     icon3.classList.add("scroll");
+
+    topbutton.classList.add("topscroll");
+
   } else {
     element.classList.remove("small");
     element2.classList.remove("small");
-   // navposition.classList.remove("small");
     navcolor.classList.remove("smol");
     kontaktaicolor.classList.remove("kntktcolor");
     phonecolor.classList.remove("phonecolor");
@@ -495,6 +546,8 @@ function scrollFunction() {
     icon1.classList.remove("scroll");
     icon2.classList.remove("scroll");
     icon3.classList.remove("scroll");
+
+    topbutton.classList.remove("topscroll");
   }
 }
 
