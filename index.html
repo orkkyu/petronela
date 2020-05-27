@@ -387,7 +387,116 @@
 </section>
 
 
-<section id="contacts" class="contacts-container">
+
+<section id="galerija" class="gallery-container">
+
+  <div class="gallery-header-container">
+    <p class="gallery-header">Galerija</p>
+  </div>
+
+
+  <div class="row">
+    <div class="column">
+      
+      <div onclick="openModal();currentSlide(1)" class="gallery-image-container hover-shadow" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div onclick="openModal();currentSlide(2)" class="gallery-image-container hover-shadow" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div onclick="openModal();currentSlide(3)" class="gallery-image-container hover-shadow" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div onclick="openModal();currentSlide(4)" class="gallery-image-container hover-shadow" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="gallery-img-full-container">
+          <div class="gallery-img-full1">
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="mySlides">
+        <img src="img/2.jpg" style="max-width: 100%; height: auto;">
+      </div>
+  
+      <div class="mySlides">
+        <img src="img/3.jpg" style="max-width: 100%; height: auto;">
+      </div>
+  
+      <div class="mySlides">
+        <img src="img/4.jpg" style="max-width: 100%; height: auto;">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+
+     <!--
+       <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+     --> 
+      <!-- Thumbnail image controls 
+      <div class="column">
+        <img class="demo" src="img/1.jpg" onclick="currentSlide(1)" alt="Nature">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/2.jpg" onclick="currentSlide(2)" alt="Snow">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/3.jpg" onclick="currentSlide(3)" alt="Mountains">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/4.jpg" onclick="currentSlide(4)" alt="Lights">
+      </div>
+-->
+
+    </div>
+  </div>
+
+
+</section>
+
+<hr class="menu-divider"></hr>
+
+<section id="kontaktai" class="contacts-container">
 
 <div id="contacts-header-container">
   <p class="contacts-header">Kontaktai</p>
@@ -513,7 +622,8 @@
   </svg>
 </div>
 <!--Waves end-->
-            <footer id="footer-cont">
+
+<footer id="footer-cont">
            
           <div class="footer-nav">
             
@@ -536,7 +646,7 @@
               </div>
               
 
-            </footer>
+</footer>
 
 
 
@@ -630,38 +740,82 @@ if (mq.matches) {
 
 // PARALLAX EFFECT LIST
 
-  window.addEventListener('scroll', function (e) {
-  var scrolled = window.pageYOffset;
+  //window.addEventListener('scroll', function (e) {
+  //var scrolled = window.pageYOffset;
+  
  // var svgparallax = document.querySelector('.contacts-svg-left');
-  var d = document.getElementById('svg1');
-  d.style.position = "absolute";
-  d.style.left = -60 +'px';
-  d.style.top = 3500 +'px';
-  var svgtest = document.querySelector('.svg-item1');
+
+ // var d = document.getElementById('svg1');
+ // d.style.position = "absolute";
+ // d.style.left = -60 +'px';
+ // d.style.top = 3500 +'px';
+ // var svgtest = document.querySelector('.svg-item1');
 
   
-  var b = document.getElementById('svg2');
-  b.style.position = "absolute";
-  b.style.left = 0 +'px';
-  b.style.top = 3000 +'px';
-var svgtest2 = document.querySelector('.svg-item2');
+ // var b = document.getElementById('svg2');
+ // b.style.position = "absolute";
+ // b.style.left = 0 +'px';
+ // b.style.top = 3000 +'px';
+//var svgtest2 = document.querySelector('.svg-item2');
    
  
-   var jmediaquery = window.matchMedia( "(min-width: 992px)" )
-if (jmediaquery.matches) {
+   //var jmediaquery = window.matchMedia( "(min-width: 992px)" )
+//if (jmediaquery.matches) {
     //svgparallax.style.top = d.offsetTop - (scrolled * 0.25) + 'px';
-    svgtest.style.top = 500 - (scrolled * 0.15) + 'px';
-    svgtest2.style.top = 500 - (scrolled * 0.25) + 'px';
-}
-else {
+   // svgtest.style.top = 500 - (scrolled * 0.15) + 'px';
+   // svgtest2.style.top = 500 - (scrolled * 0.25) + 'px';
+//}
+//else {
   //svgparallax.style.top = d.offsetTop - (scrolled * 0.5) + 'px';
-  svgtest.style.top = - (scrolled * 0.2) + 'px';
-  svgtest2.style.top = - (scrolled * 0.2) + 'px';
-}
+ // svgtest.style.top = - (scrolled * 0.2) + 'px';
+ // svgtest2.style.top = - (scrolled * 0.2) + 'px';
+//}
  
- })
+ //})
 
 
+
+
+
+
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "flex";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "flex";
+}
 
             </script>
         </body>
