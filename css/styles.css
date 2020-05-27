@@ -1284,6 +1284,7 @@ color: #fff;
   .about-wave1 {
     height: 150px; 
     overflow: hidden;
+    margin-bottom: -1px;
   }
 
   .about-wave2 {
@@ -1321,6 +1322,7 @@ color: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
+    margin: 2%;
     margin-top: -50px;
   }
 
@@ -1336,7 +1338,8 @@ color: #fff;
   }
 
   .row > .column {
-    padding: 0 8px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   
   .row {
@@ -1379,7 +1382,6 @@ color: #fff;
 .gallery-image-container:hover p.gallery-img-text {
   visibility: visible;
   opacity: 1;
-  
 }
 
 .gallery-image-sub {
@@ -1431,14 +1433,11 @@ p.gallery-img-text {
   transition: 0.3s ease;
 }
 
-
-
-
-
-  
-  /* The Modal (background) */
-  .modal {
-    display: none;
+  .gallery-modal {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -1454,23 +1453,36 @@ p.gallery-img-text {
   }
   
   /* Modal Content */
-  .modal-content {
+  .gallery-full-content {
     display: flex;
     position: relative;
     justify-content: center;
-    /*background-color: #ff6961;*/
-    /*margin: auto;*/
     padding: 0;
     width: 100%;
     max-width: 70%;
-    max-height: 90%;
+    height: auto;
   }
 
-   .mySlides {
-    display: none;
+   .images {
+    display: flex;
   }
 
-  .mySlides {
+.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s ease;
+  }
+
+.hide {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  visibility: hidden;
+}
+
+  .images img {
     max-width: 100%;
     height: auto;
   }
@@ -1483,92 +1495,130 @@ p.gallery-img-text {
     right: 25px;
     font-size: 75px;
     font-weight: bold;
+    transition: 0.3s ease;
   }
   
   .close:hover,
   .close:focus {
-    color: #999;
+    color: #ff6961;
     text-decoration: none;
     cursor: pointer;
   }
   
-  /* Hide the slides by default */
- 
-  
-  /* Next & previous buttons */
-  .prev,
+  .back,
   .next {
     cursor: pointer;
     position: fixed;
     top: 50%;
-    width: auto;
+    transform: translate(0, -50%);
+    width: 80px;
     padding: 16px;
-    margin-top: -50px;
-    color: white;
+    text-align: center;
+    color: #fff;
     font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    font-size: 3em;
+    transition: 0.3s ease;
+    background-color: rgba(150, 123, 89, 0.1);
+    border-radius: 30px 10px 30px 10px;
     user-select: none;
     -webkit-user-select: none;
-    z-index: 20;
+    opacity: 0.5;
+    z-index: 5;
   }
   
-  /* Position the "next button" to the right */
   .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 2%;
   }
 
-  .prev {
-    left: 0;
+  .back {
+    left: 2%;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
+  .back:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
- /* .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }*/
-  
-  /* Caption text */
- /* .caption-container {
-    text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-  }*/
-  
-  /*img.demo {
-    opacity: 0.6;
-  }*/
-  
-  /*.active,
-  .demo:hover {
     opacity: 1;
-  }*/
+    background-color: rgba(150, 123, 89, 0.3);
+  }
 
 .gallery-img-full-container {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100%;
-
 }
 
-  .gallery-img-full1 {
-    background: url(../img/1.jpg);
-    width: 80%;
-    height: 100%;
+.gallery-img-full1 {
+  background: url(../img/1.jpg);
+  width: 80%;
+  height: 100%;
+}
+
+
+@media only screen and (max-width: 992px) {
+  section.gallery-container {
+    margin: 0;
+    margin-top: -50px;
   }
+
+  .column {
+    width: 350px;
+    margin: 20px;
+    margin-top: 0;
+  }
+
+  .row {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .row:last-child {
+    margin-right: 50px;
+  }
+
+  .row::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+  }
+  .row::-webkit-scrollbar-thumb {
+    background: #967a5981; 
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+
+  .row::-webkit-scrollbar-thumb:hover {
+    background: #967959; 
+  }
+
+  .gallery-image-container {
+    width: 350px;
+    height: 300px;
+  }
+
+  .gallery-full-content {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .back,
+  .next {
+    top: 90%;
+    width: 80px;
+    padding: 16px;
+    background-color: rgba(150, 123, 89, 0.2);
+    border-radius: 30px 10px 30px 10px;
+    opacity: 0.8;
+  }
+  
+  .next {
+    right: 20%;
+  }
+
+  .back {
+    left: 20%;
+  }
+}
 
   /***********************************************
   ************************************************
