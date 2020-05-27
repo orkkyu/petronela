@@ -198,7 +198,6 @@ body, html {
   
   #hmbrnav {
     display: flex;
-    
     position: relative;
     align-items: center;
     height: 100%;
@@ -208,11 +207,9 @@ body, html {
   
   #hmbrnav a {
     display: flex;
-    /*margin: 0px 8px 0px 32px;*/
     flex-direction: column;
     width: 100%;
     height: 100%;
-   
     margin: 0% 10% 0% 10%;
     text-decoration: none;
     font-size: 18px;
@@ -327,6 +324,7 @@ body, html {
     padding: 10px;
     padding-left: 10%;
     padding-right: 10%;
+    z-index: 10;
   }
 
   #header2.small {
@@ -465,6 +463,12 @@ body, html {
     
   }
 
+  @media only screen and (min-width: 768px) {
+    #hmbrnav svg {
+      display: none;
+    }
+  }
+
   .header {
     position: relative;
     text-align: center;
@@ -529,9 +533,37 @@ body, html {
       100% { opacity: 0 }
   }
   
-  /*.no-cssanimations .cb-slideshow li span {
-    opacity: 1;
-  }*/
+
+  .header-cta-container {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    z-index: 1;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+  }
+
+  button.header-cta {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #ff6961;
+  border-radius: 20px 10px 20px 10px;
+  transition: 0.3s ease;
+  }
+
+  button.header-cta:hover {
+    background-color: #ff9e61;
+    border-radius: 10px 20px 10px 20px;
+  }
+
+  .cta-text {
+    color: #fff;
+    padding: 5px;
+    font-size: 1.1em;
+  }
 
   .inner-header {
     height: 70vh;
@@ -1291,6 +1323,7 @@ flex-direction: column;
 justify-content: center;
 margin: 2%;
 margin-top: -30px;
+z-index: 1;
 }
 
 .contacts-row {
@@ -1395,6 +1428,34 @@ color: #967b59;
     }
 
 
+.svg-parallax1,
+.svg-parallax2 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.svg-item1 {
+  position: relative;
+  width: 30%;
+  left: -5%;
+}
+
+.svg-item2 {
+  position: relative;
+  width: 30%;
+  left: 80%;
+}
+
+.svg-item1 svg,
+.svg-item2 svg {
+  fill: #967b59;
+  opacity: 0.3;
+}
+
+
 @media only screen and (max-width: 768px) {
   .contacts-row {
     display: flex;
@@ -1419,6 +1480,10 @@ color: #967b59;
       margin-left: 2%;
       margin-right: 2%;
      }
+
+     .contacts-svg-left {
+      width: 50%;
+    }
 }
    /***********************************************
   ************************************************
@@ -1486,7 +1551,7 @@ color: #967b59;
     position: fixed;
     bottom: 30px;
     right: 20px;
-    z-index: 5;
+    z-index: 1;
     border: none;
     outline: none;
     background-color: #f8eee7;
@@ -1524,7 +1589,6 @@ color: #967b59;
     flex-direction: row;
     width: 55%;
     justify-content: center;
-
   }
 
   .topsvg-left {
@@ -1545,8 +1609,6 @@ color: #967b59;
     fill: #967b59;
   }
   
-  
-
   .topbutton-text {
     display: flex;
     position: relative;
@@ -1558,6 +1620,25 @@ color: #967b59;
     padding: 0;
     margin: 0;
   }
+
+  @media only screen and (max-width: 768px) {
+    #topbutton {
+      bottom: 70px;
+      right: 10px;
+      border-radius: 20px 8px 20px 8px;
+    }
+
+    .topbutton-row {
+      width: 40%;
+    }
+
+    p.topbutton {
+      font-size: 11px;
+    }
+  }
+
+
+
 
   .waves-footer {
     position: relative;
