@@ -1,3 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 213.333" width="640" height="213.33"><defs><path d="M371.7 260.51L292.68 260.51" id="aGOQ7NdaN"></path><path d="M96.65 199.62C100.25 199.62 129.07 199.62 132.67 199.62C132.67 136.94 216.71 85.95 320 85.95C423.29 85.95 507.33 136.94 507.33 199.62C510.93 199.62 539.75 199.62 543.35 199.62C543.35 123.84 443.16 62.18 320 62.18C196.84 62.18 96.65 123.84 96.65 199.62Z" id="b7icTJSwLY"></path><path d="M91.85 190.12C81.9 190.12 73.83 195.43 73.83 202C73.83 208.56 81.9 213.88 91.85 213.88C137.48 213.88 502.52 213.88 548.15 213.88C558.1 213.88 566.17 208.56 566.17 202C566.17 195.43 558.1 190.12 548.15 190.12C456.89 190.12 137.48 190.12 91.85 190.12Z" id="f55zpxUCKI"></path><path d="M259.96 41.59C259.96 64.52 288.24 83.18 323 83.18C357.76 83.18 386.04 64.52 386.04 41.59C386.04 18.66 357.76 0 323 0C288.24 0 259.96 18.66 259.96 41.59ZM295.98 41.59C295.98 31.76 308.1 23.76 323 23.76C337.9 23.76 350.02 31.76 350.02 41.59C350.02 51.41 337.9 59.41 323 59.41C308.11 59.41 295.98 51.41 295.98 41.59Z" id="a1zxDWoyFz"></path></defs><g><g><g><g><use xlink:href="#aGOQ7NdaN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="0" stroke-opacity="0"></use></g></g><g><use xlink:href="#b7icTJSwLY" opacity="1" fill="#000000" fill-opacity="1"></use><g><use xlink:href="#b7icTJSwLY" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#f55zpxUCKI" opacity="1" fill="#000000" fill-opacity="1"></use><g><use xlink:href="#f55zpxUCKI" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a1zxDWoyFz" opacity="1" fill="#000000" fill-opacity="1"></use><g><use xlink:href="#a1zxDWoyFz" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 213.333">
+<defs>
+<path d="M371.7 260.51L292.68 260.51" id="aGOQ7NdaN"/>
+<path d="M96.65 199.62C100.25 199.62 129.07 199.62 132.67 199.62C132.67 136.94 216.71 85.95 320 85.95C423.29 85.95 507.33 136.94 507.33 199.62C510.93 199.62 539.75 199.62 543.35 199.62C543.35 123.84 443.16 62.18 320 62.18C196.84 62.18 96.65 123.84 96.65 199.62Z" id="b7icTJSwLY"/>
+<path d="M91.85 190.12C81.9 190.12 73.83 195.43 73.83 202C73.83 208.56 81.9 213.88 91.85 213.88C137.48 213.88 502.52 213.88 548.15 213.88C558.1 213.88 566.17 208.56 566.17 202C566.17 195.43 558.1 190.12 548.15 190.12C456.89 190.12 137.48 190.12 91.85 190.12Z" id="f55zpxUCKI"/>
+<path d="M259.96 41.59C259.96 64.52 288.24 83.18 323 83.18C357.76 83.18 386.04 64.52 386.04 41.59C386.04 18.66 357.76 0 323 0C288.24 0 259.96 18.66 259.96 41.59ZM295.98 41.59C295.98 31.76 308.1 23.76 323 23.76C337.9 23.76 350.02 31.76 350.02 41.59C350.02 51.41 337.9 59.41 323 59.41C308.11 59.41 295.98 51.41 295.98 41.59Z" id="a1zxDWoyFz"/>
+</defs>
+<use xlink:href="#aGOQ7NdaN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="0" stroke-opacity="0"/>
+<use xlink:href="#b7icTJSwLY" opacity="1" fill="#000000" fill-opacity="1"></use>
+<use xlink:href="#b7icTJSwLY" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"/>
+<use xlink:href="#f55zpxUCKI" opacity="1" fill="#000000" fill-opacity="1"/>
+<use xlink:href="#f55zpxUCKI" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"/>
+<use xlink:href="#a1zxDWoyFz" opacity="1" fill="#000000" fill-opacity="1"/>
+<use xlink:href="#a1zxDWoyFz" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"/>
+</svg>
