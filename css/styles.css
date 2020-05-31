@@ -27,6 +27,8 @@ body, html {
   #transition-out {
     opacity: 1;
     animation: ani 0.4s ease;
+    display: flex;
+    flex-direction: column;
   }
 
   @keyframes ani {
@@ -343,7 +345,39 @@ body, html {
 
 /* borgar nav
 */
+ @media only screen and (max-width: 1024px) {
+    .inner-header {
+      height: 60vh;
+    }
 
+    h1.hdr {
+      font-size: 8em;
+    }
+  
+    p.subhdr {
+      font-size: 2em;
+    }
+
+    .cta-text {
+      color: #fff;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 1.5em;
+    }
+
+    #hmbrnav span {
+      margin: 0% 8% 0% 8%;
+      font-size: 24px;
+    }
+    
+  }
+
+  @media only screen and (max-width: 992px) {
+    #hmbrnav span {
+      margin: 0% 9% 0% 9%;
+      font-size: 18px;
+    }
+  }
 @media only screen and (max-width: 768px) {
    
   #header2 {
@@ -614,7 +648,8 @@ body, html {
 
   .cta-text {
     color: #fff;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 1.1em;
   }
 
@@ -696,6 +731,8 @@ body, html {
     }
   }
 
+ 
+
   .waves {
     position: relative;
     width: 100%;
@@ -730,6 +767,10 @@ body, html {
     }
     h1.hdr {
       font-size: 60px;
+    }
+
+    .inner-header {
+      height: 65vh;
     }
 
   /*  .header-slideshow {
@@ -933,7 +974,7 @@ Menu second
 .menu-text-cotainer.menu2 {
   display: flex;
   /*align-self: center;*/
-  width: 80%;
+  /*width: 80%;*/
   padding: 2%;
   /*background-color: #f7e6cf;*/
 }
@@ -943,7 +984,6 @@ Menu second
 
 p.menu-text.menu2 {
   color: #5E4D36;
-  font-size: 1.1em;
   text-align: center;
 }
 
@@ -960,7 +1000,7 @@ p.menu-text.menu2 {
 .svg-menu1-1-container.menu2 {
   /*align-self: center;*/
   position: relative;
-  width: 80%;
+  /*width: 80%;*/
   margin-bottom: -5px;
 }
 .svg-menu1-1-container.menu2 path{
@@ -970,7 +1010,7 @@ p.menu-text.menu2 {
 .svg-menu1-2-container.menu2 {
   /*align-self: center;*/
   position: relative;
- width: 80%;
+ /*width: 80%;*/
 }
 
 .svg-menu1-2-container.menu2 path{
@@ -1059,7 +1099,7 @@ Menu third
 .menu-text-cotainer.menu3 {
   display: flex;
   /*align-self: center;*/
-  width: 80%;
+  /*width: 80%;*/
   padding: 2%;
   /*background-color: #f7e6cf;*/
 }
@@ -1069,7 +1109,6 @@ Menu third
 
 p.menu-text.menu3 {
   color: #5E4D36;
-  font-size: 1.1em;
   text-align: center;
 }
 
@@ -1083,7 +1122,7 @@ p.menu-text.menu3 {
 .svg-menu1-1-container.menu3 {
   /*align-self: center;*/
   position: relative;
-  width: 80%;
+  /*width: 80%;*/
   margin-bottom: -22px;
 }
 .svg-menu1-1-container.menu3 path{
@@ -1093,7 +1132,7 @@ p.menu-text.menu3 {
 .svg-menu1-2-container.menu3 {
   /*align-self: center;*/
   position: relative;
- width: 80%;
+  /*width: 80%;*/
 }
 
 .svg-menu1-2-container.menu3 path{
@@ -1146,6 +1185,25 @@ top: 50%;
 transform: translate(-50%,-120%);
 font-family: 'Courgette', cursive;
 color: #fff;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  p.menu-text {
+    font-size: 1.3em;
+  }
+
+  .menu-text-cotainer {
+    width: 90%;
+  }
+
+  .svg-menu1-1-container {
+    width: 90%;
+  }
+
+  .svg-menu1-2-container {
+    width: 90%;
+  }
 }
 
 
@@ -1347,6 +1405,15 @@ color: #fff;
     height: 150px; 
     overflow: hidden;
     margin-top: -1px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .text-container-about {
+      width: 50%;
+    }
+    p.about-text {
+      font-size: 1.2em;
+    }
   }
 
   @media only screen and (max-width: 992px) {
@@ -1597,7 +1664,7 @@ p.gallery-img-text {
   }
   
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .gallery-row::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -1634,30 +1701,20 @@ p.gallery-img-text {
     max-width: 100%;
   }
 
-  /*.arrow-container {
-    position: absolute;
-    right: 0;
-    width: 15%;
-    height: 300px;
-    z-index: 1;
+}
+
+@media only screen and (max-width: 992px) {
+  .column {
+    width: 350px;
+    margin: 20px;
+    margin-top: 0;
   }
 
-  .arrow {
-    height: 100%;
-    background: linear-gradient(to left, rgba(255, 105, 97, 0.5), rgba(255, 105, 97, 0));
+  .gallery-image-container {
+    width: 330px;
+    height: 300px;
   }
-  .arrow-icon {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 3em;
-    transition: 0.3s ease;
-  }*/
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -1677,6 +1734,17 @@ p.gallery-img-text {
 
   .back {
     left: 20%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .column {
+    scroll-snap-align: center;
+  }
+
+  .gallery-row {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
   }
 }
 
