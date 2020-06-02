@@ -72,10 +72,7 @@
 
         </div>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Pagrindinis</a>
-            <!--<a id="nav-icon1" href="patiekalai.html">Patiekalai</a>
-            <a id="nav-icon2" href="uzkandziai.html">Užkandžiai</a>
-            <a id="nav-icon3" href="desertai.html">Desertai</a>-->
+            <span onclick="transitionToPage('./index.html')">Pagrindinis</span>
             <span onclick="transitionToPage('./patiekalai.html')" id="nav-icon1">Patiekalai</span>
             <span onclick="transitionToPage('./uzkandziai.html')" id="nav-icon2">Užkandžiai</span>
             <span onclick="transitionToPage('./desertai.html')" id="nav-icon3">Desertai</span>
@@ -181,7 +178,7 @@
                   <div class="menu-text-cotainer">
                     <div class="text-center">         
       
-                    <p class="menu-text">Jaučiatės alkani? Mintyse galvojate, kad norėtumėte <span style="font-weight: bold;">patiekalo</span> kuris užpildytų
+                    <p class="menu-text hidden">Jaučiatės alkani? Mintyse galvojate, kad norėtumėte <span style="font-weight: bold;">patiekalo</span> kuris užpildytų
                       tuštumą jūsų skrandyje? <span style="font-weight: bold">Mes turime!</span>  
                       Mūsų patiekalų asortimentas išpildys visus 
                       Jūsų ir Jūsų kompanijos norus. Galėsite mėgautis tradiciniu lietuviškos kulinarijos menu ir ne tik!
@@ -242,7 +239,7 @@
                       <div class="menu-text-cotainer menu2">
                         <div class="text-center menu2">         
           
-                        <p class="menu-text menu2">Nesijaučiate ypatingai alkani, bet vistiek yra noras užkąsti?
+                        <p class="menu-text menu2 hidden">Nesijaučiate ypatingai alkani, bet vistiek yra noras užkąsti?
                           Gal gruzdintų bulvyčių ar vieno kasnio užkandų? <span style="font-weight: bold; color: #e28043;">Mes turime!</span>  
                           Jūsų norus gali išpildyti mūsų platus <span style="font-weight: bold; color: #e28043;">užkandžių</span> pasirinkimas.
                           Įvairovė prasideda nuo šviežių žuvies užkandų iki mūsų plataus vieno kasnio užkandų pasirinkimo!
@@ -314,7 +311,7 @@
                       <div class="menu-text-cotainer menu3">
                         <div class="text-center menu3">         
           
-                        <p class="menu-text menu3">Jaučiatės gerai ir nuotaikingai ir norite pasmaližiauti?
+                        <p class="menu-text menu3 hidden">Jaučiatės gerai ir nuotaikingai ir norite pasmaližiauti?
                           O gal norite save palepinti ir pakelti sau nuotaiką? <span style="font-weight: bold; color: #ff6961;">Mes turime!</span>  
                           Vieno kasnio <span style="font-weight: bold; color: #ff6961;">desertai</span>, ledai, lietiniai blynai su vaisiais ir daugiau, 
                           pagerins nuotaiką ne tik Jum, bet ir Jūsų kompanijai. Jums tik reikia rinktis!
@@ -366,7 +363,7 @@
   
   <p id="about-header">Apie mus</p>
   <div class="text-container-about">
-    <p class="about-text">„Petronela“ yra įsikūrusi Kauno mieste, Kauno futbolo manieže.
+    <p class="about-text hidden">„Petronela“ yra įsikūrusi Kauno mieste, Kauno futbolo manieže.
       Mūsų kukli virtuvė jau ne vienerius metus džiugina įvairaus amžiaus sportininkus, keliautojus,
       renginių dalyvius ir spontaniškus praeivius. Mūsų darbuotojų grupės nariai yra jaunatviški ir nebijantys naujovių. 
       Jie kiekvieną dieną stengiasi tobulinti mūsų patiekalų asortimentą ir tobulinti 
@@ -433,6 +430,42 @@
         </div>
       </div>
     </div>
+
+    <div class="column">
+      <div onclick="openModal();currentSlide(5)" class="gallery-image-container" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img5"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div onclick="openModal();currentSlide(6)" class="gallery-image-container" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img6"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div onclick="openModal();currentSlide(7)" class="gallery-image-container" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img7"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div onclick="openModal();currentSlide(8)" class="gallery-image-container" >
+        <div class="gallery-image-sub">
+          <p class="gallery-img-text">Peržiūrėti</p>
+          <div class="gallery-img img8"></div>
+        </div>
+      </div>
+    </div>
   </div>
   
   <div id="gallery-popup" class="gallery-modal">
@@ -454,6 +487,22 @@
   
       <div class="images">
         <img src="img/4.jpg">
+      </div>
+
+      <div class="images">
+        <img src="img/5.jpg">
+      </div>
+  
+      <div class="images">
+        <img src="img/6.jpg">
+      </div>
+  
+      <div class="images">
+        <img src="img/7.jpg">
+      </div>
+  
+      <div class="images">
+        <img src="img/8.jpg">
       </div>
   
       <a class="back" onclick="plusSlides(-1)">&#10094;</a>
@@ -610,15 +659,13 @@
               </div>
               <div class="footer-social">
 
-                <a href="https://www.facebook.com/pages/category/Foodservice-Distributor/UABPetronela-900696636684884/" target="_blank" class="fa facebook fa-facebook"></a>
+                <a href="https://www.facebook.com/skonio.fanai/" target="_blank" class="fa facebook fa-facebook"></a>
 
               </div>
               <div class="footer-logo">
                 <a id="footer_logo" href="index.html">Petronela</a>
-                <p class="footer-copyright">© 2020 Petronela. Visos teisės yra saugomos</p>
-                <p class="footer-copyright">Piktogramos iš <a class="footer-sources" href="https://www.flaticon.com" target="_blank">Flaticon</a>
-                | Antraštės fotografijos iš <a class="footer-sources" href="https://www.pixabay.com" target="_blank">Pixabay</a></p>
-
+                <p class="footer-copyright">© 2020 Petronela. Visos teisės yra saugomos.</p>
+                <p class="footer-copyright">Piktogramos iš <a class="footer-sources" href="https://www.flaticon.com" target="_blank">Flaticon.</a></p>
               </div>
               
 
@@ -734,20 +781,20 @@ if (mq.matches) {
 window,addEventListener('scroll', function (e){
   var scrolled = window.pageYOffset;
 
-  const background =document.querySelector('.svg-item1');
-  const background2 =document.querySelector('.svg-item2');
+  const svg1 =document.querySelector('.svg-item1');
+  const svg2 =document.querySelector('.svg-item2');
 
   
 
 var jmq = window.matchMedia( "(min-width: 992px)" )
 if (jmq.matches) {
   
-  background.style.top = 1000 - (scrolled * 0.2) + 'px';
-  background2.style.top = 1000 - (scrolled * 0.35) + 'px';
+  svg1.style.top = 1350 - (scrolled * 0.2) + 'px';
+  svg2.style.top = 1500 - (scrolled * 0.35) + 'px';
 }
 else {
-  background.style.top = 1300 - (scrolled * 0.2) + 'px';
-  background2.style.top = 1300 - (scrolled * 0.35) + 'px';
+  svg1.style.top = 1300 - (scrolled * 0.2) + 'px';
+  svg2.style.top = 1300 - (scrolled * 0.35) + 'px';
 }
 
 })
@@ -793,6 +840,33 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "flex";
 }
 
+
+/* scroll text fade
+*/
+(function() {
+  var hidden;
+  var winHeight;
+  function hideit() {
+    hidden = document.querySelectorAll('.hidden');
+    winHeight = window.innerHeight;
+  }
+  function checkPosition() {
+    for (var i = 0; i < hidden.length; i++) {
+      var text = hidden[i];
+      var topoffset = hidden[i].getBoundingClientRect().top;
+
+      if (topoffset - winHeight <= 0) {
+        text.classList.add('fade-scroll');
+        text.classList.remove('hidden');
+      }
+    }
+  }
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', hideit);
+
+  hideit();
+  checkPosition();
+})();
             </script>
         </body>
     
