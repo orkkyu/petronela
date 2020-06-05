@@ -495,7 +495,7 @@
       </div>
   
       <div class="images">
-        <img src="img/7.jpg">
+        <img src="img/menu-2.jpg">
       </div>
   
       <div class="images">
@@ -675,197 +675,136 @@
 
 
 <script>
-
-window.transitionToPage = function(href) {
-    document.getElementById("transition-in").style.opacity = '0';
-
-    document.getElementById("fade-logo").style.visibility = 'visible';
-    document.getElementById("fade-logo").style.opacity = '1';
-    setTimeout(function() { 
-        window.location.href = href
-    }, 500)
-}
-
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-/* HEADER SCROLL stuff
-*/
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-
-var topbutton = document.getElementById("topbutton");
-
-  var element = document.getElementById("header2");
-  var element2 = document.getElementById("header_logo");
-  var navcolor = document.getElementById("hmbrnav");
-  var kontaktaicolor = document.getElementById("headerkontaktai");
-  var phonecolor = document.getElementById("phoneicon");
-  var navbtncolor = document.getElementById("navbtnon");
-  var icon1 = document.getElementById("nav-icon1");
-  var icon2 = document.getElementById("nav-icon2");
-  var icon3 = document.getElementById("nav-icon3");
-
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    element.classList.add("small");
-    element2.classList.add("small");
-    navcolor.classList.add("smol");
-    kontaktaicolor.classList.add("kntktcolor");
-    phonecolor.classList.add("phonecolor");
-    navbtncolor.classList.add("navbtncolor");
-    icon1.classList.add("scroll");
-    icon2.classList.add("scroll");
-    icon3.classList.add("scroll");
-    topbutton.classList.add("topscroll");
-
+window.transitionToPage=function(t){document.getElementById("transition-in").style.opacity="0",document.getElementById("fade-logo").style.visibility="visible",document.getElementById("fade-logo").style.opacity="1",setTimeout(function(){window.location.href=t},500)};
+  function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}
+  /* HEADER SCROLL stuff
+  */
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+  var topbutton = document.getElementById("topbutton");
+    var element = document.getElementById("header2");
+    var element2 = document.getElementById("header_logo");
+    var navcolor = document.getElementById("hmbrnav");
+    var kontaktaicolor = document.getElementById("headerkontaktai");
+    var phonecolor = document.getElementById("phoneicon");
+    var navbtncolor = document.getElementById("navbtnon");
+    var icon1 = document.getElementById("nav-icon1");
+    var icon2 = document.getElementById("nav-icon2");
+    var icon3 = document.getElementById("nav-icon3");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      element.classList.add("small");
+      element2.classList.add("small");
+      navcolor.classList.add("smol");
+      kontaktaicolor.classList.add("kntktcolor");
+      phonecolor.classList.add("phonecolor");
+      navbtncolor.classList.add("navbtncolor");
+      icon1.classList.add("scroll");
+      icon2.classList.add("scroll");
+      icon3.classList.add("scroll");
+      topbutton.classList.add("topscroll");}
+      else{
+      element.classList.remove("small");
+      element2.classList.remove("small");
+      navcolor.classList.remove("smol");
+      kontaktaicolor.classList.remove("kntktcolor");
+      phonecolor.classList.remove("phonecolor");
+      navbtncolor.classList.remove("navbtncolor");
+      icon1.classList.remove("scroll");
+      icon2.classList.remove("scroll");
+      icon3.classList.remove("scroll");
+      topbutton.classList.remove("topscroll");}}
+  /* BORGAR NAV stuff
+  */
+  function openNav() {
+    document.getElementById("hmbrnav").style.webkitBorderRadius = "0 0 0 0";
+    document.getElementById("hmbrnav").style.transition = "0.5s";  
+    document.getElementById("hmbrnav").style.width = "100%"; 
+    document.getElementById("svg-container").style.display = "initial";
+  }
+  function closeNav() {
+    setTimeout(function(closeNav) {
+      document.getElementById("svg-container").style.display = "none";
+    }, 500);
+    document.getElementById("hmbrnav").style.transition = "0.5s";
+    document.getElementById("hmbrnav").style.width = "0%";
+    document.getElementById("hmbrnav").style.webkitBorderRadius = "100% 0 0 100%";
+  }
+  if (matchMedia) {
+  const mq = window.matchMedia("(min-width: 769px)");
+  mq.addListener(WidthFix);
+  WidthFix(mq);
+  }
+  function WidthFix(mq) {
+  if (mq.matches) {
+    document.getElementById("hmbrnav").style.transition = "none";
+    document.getElementById("hmbrnav").style.width = "100%";
   } else {
-    element.classList.remove("small");
-    element2.classList.remove("small");
-    navcolor.classList.remove("smol");
-    kontaktaicolor.classList.remove("kntktcolor");
-    phonecolor.classList.remove("phonecolor");
-    navbtncolor.classList.remove("navbtncolor");
-    icon1.classList.remove("scroll");
-    icon2.classList.remove("scroll");
-    icon3.classList.remove("scroll");
-    topbutton.classList.remove("topscroll");
-  }
-}
-
-/* BORGAR NAV stuff
-*/
-
-function openNav() {
-  document.getElementById("hmbrnav").style.webkitBorderRadius = "0 0 0 0";
-  document.getElementById("hmbrnav").style.transition = "0.5s";  
-  document.getElementById("hmbrnav").style.width = "100%"; 
-  document.getElementById("svg-container").style.display = "initial";
-}
-function closeNav() {
-
-  setTimeout(function(closeNav) {
-    document.getElementById("svg-container").style.display = "none";
-  }, 500);
-
-  document.getElementById("hmbrnav").style.transition = "0.5s";
-  document.getElementById("hmbrnav").style.width = "0%";
-  document.getElementById("hmbrnav").style.webkitBorderRadius = "100% 0 0 100%";
-
-}
-
- if (matchMedia) {
-const mq = window.matchMedia("(min-width: 769px)");
-mq.addListener(WidthFix);
-WidthFix(mq);
-}
-
-function WidthFix(mq) {
-if (mq.matches) {
-  document.getElementById("hmbrnav").style.transition = "none";
-  document.getElementById("hmbrnav").style.width = "100%";
-} else {
-  document.getElementById("hmbrnav").style.width = "0%";
-    }
-
-  } 
-
-/* PARALAX 
-*/
-
-window,addEventListener('scroll', function (e){
-  var scrolled = window.pageYOffset;
-
-  const svg1 =document.querySelector('.svg-item1');
-  const svg2 =document.querySelector('.svg-item2');
-
-  
-
-var jmq = window.matchMedia( "(max-width: 768px)" )
-if (jmq.matches) {
-  
-  svg1.style.top = 1200 - (scrolled * 0.2) + 'px';
-  svg2.style.top = 1300 - (scrolled * 0.35) + 'px';
-}
-else {
-  svg1.style.top = 1200 - (scrolled * 0.2) + 'px';
-  svg2.style.top = 1400 - (scrolled * 0.35) + 'px';
-}
-
-})
-
-
-
-/* GALLERY
-*/
-
-function openModal() {
-  document.getElementById("gallery-popup").style.visibility = "visible";
-  document.getElementById("gallery-popup").style.opacity = "1";
-  document.getElementById("gallery-popup").style.transition = "0.3s ease";
-}
-
-function closeModal() {
-  document.getElementById("gallery-popup").style.opacity = "0";
-  document.getElementById("gallery-popup").style.visibility = "hidden";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("images");
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "flex";
-}
-
-
-/* scroll text fade
-*/
-(function() {
-  var hidden;
-  var winHeight;
-  function hideit() {
-    hidden = document.querySelectorAll('.hidden');
-    winHeight = window.innerHeight;
-  }
-  function checkPosition() {
-    for (var i = 0; i < hidden.length; i++) {
-      var text = hidden[i];
-      var topoffset = hidden[i].getBoundingClientRect().top;
-
-      if (topoffset - winHeight <= 0) {
-        text.classList.add('fade-scroll');
-        text.classList.remove('hidden');
+    document.getElementById("hmbrnav").style.width = "0%";
       }
-    }
   }
-  window.addEventListener('scroll', checkPosition);
-  window.addEventListener('resize', hideit);
-
-  hideit();
-  checkPosition();
-})();
-            </script>
+  /* PARALAX 
+  */
+  window,addEventListener('scroll', function (e){
+    var scrolled = window.pageYOffset;
+    const svg1 =document.querySelector('.svg-item1');
+    const svg2 =document.querySelector('.svg-item2');
+  var jmq = window.matchMedia( "(max-width: 768px)" )
+  if (jmq.matches) {
+    svg1.style.top = 1200 - (scrolled * 0.2) + 'px';
+    svg2.style.top = 1300 - (scrolled * 0.35) + 'px';}
+  else{
+    svg1.style.top = 1200 - (scrolled * 0.2) + 'px';
+    svg2.style.top = 1400 - (scrolled * 0.35) + 'px';}
+  })
+  /* GALLERY
+  */
+  function openModal() {
+    document.getElementById("gallery-popup").style.visibility = "visible";
+    document.getElementById("gallery-popup").style.opacity = "1";
+    document.getElementById("gallery-popup").style.transition = "0.3s ease";}
+  function closeModal() {
+    document.getElementById("gallery-popup").style.opacity = "0";
+    document.getElementById("gallery-popup").style.visibility = "hidden";}
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+    showSlides(slideIndex += n);}
+  function currentSlide(n) {
+    showSlides(slideIndex = n);}
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("images");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "flex";}
+  /* scroll text fade
+  */
+  (function() {
+    var hidden;
+    var winHeight;
+    function hideit() {
+      hidden = document.querySelectorAll('.hidden');
+      winHeight = window.innerHeight;}
+    function checkPosition() {
+      for (var i = 0; i < hidden.length; i++) {
+        var text = hidden[i];
+        var topoffset = hidden[i].getBoundingClientRect().top;
+        if (topoffset - winHeight <= 0) {
+          text.classList.add('fade-scroll');
+          text.classList.remove('hidden');}
+      }}
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', hideit);
+    hideit();
+    checkPosition();})();
+</script>
         </body>
     
 </html>
