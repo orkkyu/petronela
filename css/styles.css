@@ -125,7 +125,7 @@ p {
 #header2.small {
   height: 80px;
   background: rgba(248, 238, 231, 0.9);
-  border-bottom: solid 3px #967b59;
+  /*border-bottom: solid 3px #967b59;*/
   z-index: 2;
 }
 
@@ -490,7 +490,7 @@ p.navkontaktai {
 #header2.small {
   height: 70px;
   background: rgba(248, 238, 231, 0.99);
-  border-bottom: solid 3px #967b59;
+  /*border-bottom: solid 3px #967b59;*/
 }
 
 #header_logo {
@@ -906,11 +906,11 @@ p.subhdr.ss2 {
   }
 
   h1.hdr {
-    font-size: 9em;
+    font-size: 8.5em;
   }
 
   p.subhdr {
-    font-size: 3em;
+    font-size: 2.8em;
   }
 }
 
@@ -2262,7 +2262,7 @@ section.gallery-container {
 .next {
   top: 90%;
   width: 80px;
-  padding: 16px;
+  padding: 5px;
   background-color: rgba(150, 123, 89, 0.6);
   border-radius: 30px 10px 30px 10px;
   opacity: 0.8;
@@ -3177,6 +3177,13 @@ h1.hdr.two {
   url(../img/header-ss3.jpg) no-repeat center center;
 }
 
+#header2.small-two {
+  height: 80px;
+  background: rgba(248, 238, 231, 0.9);
+  border-bottom: solid 3px #967b59;
+  z-index: 2;
+}
+
 #header2.small-three {
   height: 80px;
   background: rgba(248, 238, 231, 0.99);
@@ -3435,17 +3442,19 @@ hr.menu-item-divider.dynamic {
 }
 
 @media only screen and (max-width: 768px) {
+  #header2.small-two {
+    height: 70px;
+    background: rgba(248, 238, 231, 0.99);
+  }
 
   #header2.small-three {
     height: 70px;
     background: rgba(248, 238, 231, 0.99);
-    border-bottom: solid 3px #ec8c4c;
   }
 
   #header2.small-four {
     height: 70px;
     background: rgba(248, 238, 231, 0.99);
-    border-bottom: solid 3px #ff6961;
   }
 
   .menu-header-cont.menu {
@@ -3582,7 +3591,7 @@ p.okbtn {
   color: #fff;
 }
 
-.juostahdr {
+.juosta {
   width: 4000px;
   height: 5px;
   animation: spalvos 4s infinite;
@@ -3593,7 +3602,23 @@ p.okbtn {
   overflow: hidden;
 }
 .gradienthdr {
-  background: linear-gradient(to right, #ff6961, #ff9e61, #967959, #ff6961);
+  background: linear-gradient(to right, #ff6961, #ff9e61, #ff9e61, #967959,#967959, #ff6961);
+}
+
+.juosta.header {
+  position: fixed;
+  top: 120px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.juosta.gradscroll {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  z-index: 2;
+  top: 77px;
 }
 
 @keyframes spalvos {
@@ -3693,6 +3718,9 @@ p.privacy-text.disclaimer {
 }
 
 @media only screen and (max-width: 768px) {
+  .juosta.gradscroll {
+    top: 70px;
+  }
   .cookies-bg {
     flex-direction: column;
     justify-content: center;
