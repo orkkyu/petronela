@@ -630,6 +630,21 @@
 </button>
 
 
+<div id="cookies-box" class="cookies-container">
+  <div class="juostafix">
+  <div class="juostahdr gradienthdr"></div>
+</div>
+  <div class="cookies-bg">
+    <div class="cookies-txt">
+        <p class="cookies">UAB „Petronela“ svetainėje slapukai (angl. „cookies“), saugoti informacijai, nėra naudojami.
+      Jeigu norite sužinoti plačiau apie saugomą informaciją, skaitykite <span onclick="transitionToPage('./privatumas.html')" class="policy">Privatumo politika.</span>
+    </p>
+    </div>
+    <div id="cookies-ok" class="okbutton">
+      <p class="okbtn">Puiku!</p>
+    </div>
+  </div>
+</div>
 
 
 
@@ -643,7 +658,6 @@
       </g>
   </svg>
 </div>
-
 
 <footer id="footer-cont">
            
@@ -662,6 +676,7 @@
               <div class="footer-logo">
                 <a id="footer_logo" href="index.html">Petronela</a>
                 <p class="footer-copyright">© 2020 Petronela. Visos teisės yra saugomos.</p>
+                <p class="footer-copyright">Plačiau apie <span onclick="transitionToPage('./privatumas.html')" class="policy-footer">Privatumo politiką.</span></p>
                 <p class="footer-copyright">Piktogramos iš <a class="footer-sources" href="https://www.flaticon.com" target="_blank">Flaticon.</a></p>
               </div>
               
@@ -675,8 +690,14 @@
 
 
 <script>
-window.transitionToPage=function(t){document.getElementById("transition-in").style.opacity="0",document.getElementById("fade-logo").style.visibility="visible",document.getElementById("fade-logo").style.opacity="1",setTimeout(function(){window.location.href=t},500)};
-  function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}
+window.transitionToPage=function(t)
+{document.getElementById("transition-in").style.opacity="0",
+document.getElementById("fade-logo").style.visibility="visible",
+document.getElementById("fade-logo").style.opacity="1",
+setTimeout(function(){window.location.href=t},500)};
+  function topFunction()
+  {document.body.scrollTop=0;
+  document.documentElement.scrollTop=0}
   /* HEADER SCROLL stuff
   */
   window.onscroll = function() {scrollFunction()};
@@ -744,7 +765,7 @@ window.transitionToPage=function(t){document.getElementById("transition-in").sty
   }
   /* PARALAX 
   */
-  window,addEventListener('scroll', function (e){
+  window.addEventListener('scroll', function (e){
     var scrolled = window.pageYOffset;
     const svg1 =document.querySelector('.svg-item1');
     const svg2 =document.querySelector('.svg-item2');
@@ -759,12 +780,18 @@ window.transitionToPage=function(t){document.getElementById("transition-in").sty
   /* GALLERY
   */
   function openModal() {
-    document.getElementById("gallery-popup").style.visibility = "visible";
+   /* document.getElementById("gallery-popup").style.visibility = "visible";
     document.getElementById("gallery-popup").style.opacity = "1";
-    document.getElementById("gallery-popup").style.transition = "0.3s ease";}
+    document.getElementById("gallery-popup").style.transition = "0.3s ease";*/
+    var popopen = document.getElementById("gallery-popup");
+    popopen.classList.add("open");
+    }
   function closeModal() {
-    document.getElementById("gallery-popup").style.opacity = "0";
-    document.getElementById("gallery-popup").style.visibility = "hidden";}
+   /* document.getElementById("gallery-popup").style.opacity = "0";
+    document.getElementById("gallery-popup").style.visibility = "hidden";*/
+    var popclose = document.getElementById("gallery-popup");
+    popclose.classList.remove("open");
+    }
   var slideIndex = 1;
   showSlides(slideIndex);
   function plusSlides(n) {
@@ -804,6 +831,12 @@ window.transitionToPage=function(t){document.getElementById("transition-in").sty
     window.addEventListener('resize', hideit);
     hideit();
     checkPosition();})();
+
+document.getElementById("cookies-ok").addEventListener("click", function() {
+  var cookies = document.getElementById("cookies-box");
+
+  cookies.classList.add("cookies-close");
+})
 </script>
         </body>
     
