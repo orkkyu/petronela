@@ -71,6 +71,7 @@
             <span onclick="transitionToPage('./patiekalai.html')" id="nav-icon1">Patiekalai</span>
             <span onclick="transitionToPage('./uzkandziai.html')" id="nav-icon2">Užkandžiai</span>
             <span onclick="transitionToPage('./desertai.html')" id="nav-icon3">Desertai</span>
+            <span onclick="transitionToPage('./dienos-pasiulymas.html')" id="nav-icon3">Pasiūlymas</span>
 
 
             <div id="navkontaktai">
@@ -523,18 +524,18 @@
     </div>
 
   <div class="contacts-row">
-    <div class="contacts-column">
+    <div class="contacts-column hidden">
       <div class="contacts-subheader">Adresas</div>
       <p class="contacts-adress">Aukštaičių g. 51, <br>Kaunas, Lietuva</p>
     </div>
-    <div class="contacts-column">
+    <div class="contacts-column hidden delay1">
       <div class="contacts-subheader">Darbo laikas</div>
       <p class="contacts-adress">I-V<br>
         11:00 — 18:00<br>
         VI - VII<br>
         11:00 — 18:00</p>
     </div>
-    <div class="contacts-column">
+    <div class="contacts-column hidden delay2">
       <div class="contacts-subheader">Susisiekite per:</div>
       <a class="contacts-list" href="tel:+37065557091">
         <div class="fa contacts">&#xf095;</div>
@@ -747,6 +748,10 @@ setTimeout(function(){window.location.href=t},500)};
     document.getElementById("hmbrnav").style.transition = "0.5s";  
     document.getElementById("hmbrnav").style.width = "100%"; 
     document.getElementById("svg-container").style.display = "initial";
+    var hidegrad = document.getElementById("hdrgrad");
+    var showcontacts = document.getElementById("navkontaktai");
+    hidegrad.classList.add("hide");
+    showcontacts.classList.add("show");
   }
   function closeNav() {
     setTimeout(function(closeNav) {
@@ -755,6 +760,10 @@ setTimeout(function(){window.location.href=t},500)};
     document.getElementById("hmbrnav").style.transition = "0.5s";
     document.getElementById("hmbrnav").style.width = "0%";
     document.getElementById("hmbrnav").style.webkitBorderRadius = "100% 0 0 100%";
+    var showgrad = document.getElementById("hdrgrad");
+    var hidecontacts = document.getElementById("navkontaktai");
+    showgrad.classList.remove("hide");
+    hidecontacts.classList.remove("show");
   }
   if (matchMedia) {
   const mq = window.matchMedia("(min-width: 769px)");

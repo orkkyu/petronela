@@ -359,30 +359,23 @@
 
 
 <script>
-
 window.transitionToPage = function(href) {
     document.getElementById("transition-in").style.opacity = '0'
-
     document.getElementById("fade-logo").style.visibility = 'visible';
     document.getElementById("fade-logo").style.opacity = '1';
     setTimeout(function() { 
         window.location.href = href
     }, 500)
 }
-
-
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 /* HEADER SCROLL stuff
 */
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
-
-var topbutton = document.getElementById("topbutton");
-
+  var topbutton = document.getElementById("topbutton");
   var element = document.getElementById("header2");
   var element2 = document.getElementById("header_logo");
   var navcolor = document.getElementById("hmbrnav");
@@ -392,7 +385,6 @@ var topbutton = document.getElementById("topbutton");
   var icon1 = document.getElementById("nav-icon1");
   var icon2 = document.getElementById("nav-icon2");
   var icon3 = document.getElementById("nav-icon3");
-
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     element.classList.add("small-four");
     element2.classList.add("small");
@@ -404,7 +396,6 @@ var topbutton = document.getElementById("topbutton");
     icon2.classList.add("scroll");
     icon3.classList.add("scroll");
     topbutton.classList.add("topscroll");
-
   } else {
     element.classList.remove("small-four");
     element2.classList.remove("small");
@@ -415,13 +406,10 @@ var topbutton = document.getElementById("topbutton");
     icon1.classList.remove("scroll");
     icon2.classList.remove("scroll");
     icon3.classList.remove("scroll");
-    topbutton.classList.remove("topscroll");
-  }
+    topbutton.classList.remove("topscroll");}
 }
-
 /* BORGAR NAV stuff
 */
-
 function openNav() {
   document.getElementById("hmbrnav").style.webkitBorderRadius = "0 0 0 0";
   document.getElementById("hmbrnav").style.transition = "0.5s";  
@@ -429,55 +417,25 @@ function openNav() {
   document.getElementById("svg-container").style.display = "initial";
 }
 function closeNav() {
-
   setTimeout(function(closeNav) {
     document.getElementById("svg-container").style.display = "none";
   }, 500);
-
   document.getElementById("hmbrnav").style.transition = "0.5s";
   document.getElementById("hmbrnav").style.width = "0%";
   document.getElementById("hmbrnav").style.webkitBorderRadius = "100% 0 0 100%";
-
 }
-
  if (matchMedia) {
 const mq = window.matchMedia("(min-width: 769px)");
 mq.addListener(WidthFix);
 WidthFix(mq);
 }
-
 function WidthFix(mq) {
 if (mq.matches) {
   document.getElementById("hmbrnav").style.transition = "none";
   document.getElementById("hmbrnav").style.width = "100%";
 } else {
-  document.getElementById("hmbrnav").style.width = "0%";
-    }
-
+  document.getElementById("hmbrnav").style.width = "0%";}
   } 
-
-/* PARALAX 
-*/
-
-/*window,addEventListener('scroll', function (e){
-  var scrolled = window.pageYOffset;
-  const background =document.querySelector('.svg-item1');
-  const background2 =document.querySelector('.svg-item2');
-
-var jmq = window.matchMedia( "(min-width: 992px)" )
-if (jmq.matches) {
-  
-  background.style.top = 1000 - (scrolled * 0.2) + 'px';
-  background2.style.top = 1000 - (scrolled * 0.35) + 'px';
-}
-else {
-  background.style.top = 1300 - (scrolled * 0.2) + 'px';
-  background2.style.top = 1300 - (scrolled * 0.35) + 'px';
-}
-
-})
-*/
-
             </script>
         </body>
     
