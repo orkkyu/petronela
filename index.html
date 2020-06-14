@@ -71,7 +71,7 @@
             <span onclick="transitionToPage('./patiekalai.html')" id="nav-icon1">Patiekalai</span>
             <span onclick="transitionToPage('./uzkandziai.html')" id="nav-icon2">Užkandžiai</span>
             <span onclick="transitionToPage('./desertai.html')" id="nav-icon3">Desertai</span>
-            <span onclick="transitionToPage('./dienos-pasiulymas.html')" id="nav-icon3">Pasiūlymas</span>
+            <span onclick="transitionToPage('./dienos-pasiulymas.html')" id="nav-icon4">Pasiūlymas</span>
 
 
             <div id="navkontaktai">
@@ -716,6 +716,7 @@ setTimeout(function(){window.location.href=t},500)};
     var icon1 = document.getElementById("nav-icon1");
     var icon2 = document.getElementById("nav-icon2");
     var icon3 = document.getElementById("nav-icon3");
+    var icon4 = document.getElementById("nav-icon4");
     var headergrad = document.getElementById("hdrgrad");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       element.classList.add("small");
@@ -727,6 +728,7 @@ setTimeout(function(){window.location.href=t},500)};
       icon1.classList.add("scroll");
       icon2.classList.add("scroll");
       icon3.classList.add("scroll");
+      icon4.classList.add("scroll");
       topbutton.classList.add("topscroll");
       headergrad.classList.add("gradscroll");}
       else{
@@ -739,6 +741,7 @@ setTimeout(function(){window.location.href=t},500)};
       icon1.classList.remove("scroll");
       icon2.classList.remove("scroll");
       icon3.classList.remove("scroll");
+      icon4.classList.remove("scroll");
       topbutton.classList.remove("topscroll");
       headergrad.classList.remove("gradscroll");}}
   /* BORGAR NAV stuff
@@ -748,6 +751,7 @@ setTimeout(function(){window.location.href=t},500)};
     document.getElementById("hmbrnav").style.transition = "0.5s";  
     document.getElementById("hmbrnav").style.width = "100%"; 
     document.getElementById("svg-container").style.display = "initial";
+    document.getElementById("topbutton").style.zIndex = "1";
     var hidegrad = document.getElementById("hdrgrad");
     var showcontacts = document.getElementById("navkontaktai");
     hidegrad.classList.add("hide");
@@ -760,6 +764,7 @@ setTimeout(function(){window.location.href=t},500)};
     document.getElementById("hmbrnav").style.transition = "0.5s";
     document.getElementById("hmbrnav").style.width = "0%";
     document.getElementById("hmbrnav").style.webkitBorderRadius = "100% 0 0 100%";
+    document.getElementById("topbutton").style.zIndex = "2";
     var showgrad = document.getElementById("hdrgrad");
     var hidecontacts = document.getElementById("navkontaktai");
     showgrad.classList.remove("hide");

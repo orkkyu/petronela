@@ -215,7 +215,8 @@ display: inline-block;
 
 #nav-icon1:hover::after, 
 #nav-icon2:hover::after,
-#nav-icon3:hover::after {
+#nav-icon3:hover::after,
+#nav-icon4:hover::after {
   width: 100%;
   opacity: 1;
 }
@@ -302,6 +303,39 @@ display: inline-block;
     hue-rotate(314deg) brightness(104%) contrast(100%);
   }
 
+  #nav-icon4::after {
+    content: '';
+    display: block;
+    width: 0;
+    opacity: 0;
+    height: 18px;
+    background-image: url(../img/kocelas.png);
+    background-size: 100% 100%;
+    -webkit-filter: invert(89%) sepia(20%) saturate(493%) 
+    hue-rotate(337deg) brightness(97%) contrast(90%);
+            filter: invert(89%) sepia(20%) saturate(493%) 
+            hue-rotate(337deg) brightness(97%) contrast(90%);
+    -webkit-transition: width .3s, opacity 0.4s;
+    -o-transition: width .3s, opacity 0.4s;
+    transition: width .3s, opacity 0.4s;
+  } 
+
+  #nav-icon4::after {
+    -webkit-filter: invert(89%) sepia(20%) saturate(493%) 
+    hue-rotate(337deg) brightness(97%) contrast(90%);
+            filter: invert(89%) sepia(20%) saturate(493%) 
+            hue-rotate(337deg) brightness(97%) contrast(90%);
+    -webkit-transition: width .3s, opacity 0.4s;
+    -o-transition: width .3s, opacity 0.4s;
+    transition: width .3s, opacity 0.4s;
+  }
+  #nav-icon4.scroll::after {
+    -webkit-filter: invert(78%) sepia(45%) saturate(2779%) 
+    hue-rotate(336deg) brightness(102%) contrast(96%);
+            filter: invert(78%) sepia(45%) saturate(2779%) 
+            hue-rotate(336deg) brightness(102%) contrast(96%);
+  }
+
 #navbtnon {
   display: none;
 }
@@ -375,6 +409,10 @@ display: inline-block;
 
 #hmbrnav.smol span:hover:nth-child(6) {
   color: #ff6961;
+}
+
+#hmbrnav.smol span:hover:nth-child(7) {
+  color: #e99323;
 }
 
 #hmbrnav span:nth-of-type(1) {
