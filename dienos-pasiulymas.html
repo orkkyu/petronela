@@ -17,7 +17,20 @@
             <div class="fade-text">Petronela</div>
           </div>
 
-          <div id="transition-in">
+<div id="intro-logo" class="logo-fade-container offer">
+    <div class="fade-text">Petronela</div>
+  </div>
+
+          <div id="transition-in" class="offer">
+<div id="intro-cont" class="intro-container">
+  <div class="shape red"></div>
+  <div class="shape orange"></div>
+  <div class="shape brown"></div>
+  <div class="intro-txt-container">
+      <div class="intro-text">Šiandieną Jums siūlome...</div>
+  </div>
+</div>
+
           <div id="transition-out">
 
 <section id="header-section">
@@ -97,7 +110,7 @@
    
                   
                 <div class="inner-header privacy flex innerhdr-col">
-                    <h1 class="hdr privacy">Privatumo politika</h1>
+                    <h1 class="hdr privacy">Dienos pasiūlymas</h1>
                 </div>
                 
 
@@ -312,6 +325,12 @@ if (mq.matches) {
 } else {
   document.getElementById("hmbrnav").style.width = "0%";}
   } 
+  setTimeout(function() {
+    var disableIntro = document.getElementById("intro-cont");
+    var disableLogo = document.getElementById("intro-logo");
+    disableIntro.classList.add("disable");
+    disableLogo.classList.add("disable");
+    }, 6000);
             </script>
         </body>
     

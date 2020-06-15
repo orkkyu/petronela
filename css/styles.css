@@ -88,6 +88,25 @@ opacity: 0;
 transition: opacity 0.25s ease;
 }
 
+.logo-fade-container.offer {
+  z-index: 4;
+  visibility: visible;
+  transition: none;
+  animation: smooth-logo 0.4s ease;
+}
+
+.logo-fade-container.offer.disable {
+  z-index: -1;
+  visibility: hidden;
+  display: none;
+  transition: none;
+}
+
+@keyframes smooth-logo {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 .fade-text {
 font-family: 'Courgette', cursive;
 color: #967959;
@@ -3834,6 +3853,12 @@ p.privacy-text.disclaimer {
   color: #ff6961;
 }
 
+@media only screen and (max-width: 992px) {
+  h1.hdr.privacy {
+    font-size: 4em;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .juosta.gradscroll {
     top: 70px;
@@ -3869,4 +3894,148 @@ p.privacy-text.disclaimer {
     padding: 3%;
     margin-top: 24px;
   }
+}
+
+#transition-in.offer {
+  opacity: 1;
+  animation: ani-offer 0.4s ease;
+  }
+
+  @keyframes ani-offer {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .intro-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #f8eee7;
+    z-index: 12;
+    animation: intro-cont-fade 6.2s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .intro-container.disable {
+    display: none;
+    z-index: -1;
+  }
+
+  @keyframes intro-cont-fade {
+    0% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  
+.intro-txt-container {
+  display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+  .intro-text {
+    font-family: 'Courgette', cursive;
+    color: #967959;
+    font-size: 4em;
+    text-align: center;
+    animation: intro-txt 4s ease;
+    animation-fill-mode: forwards;
+    }
+
+  @keyframes intro-txt {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+  .shape {
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    border-radius: 50%;
+  }
+
+  .shape.red {
+  background-color: #ff6961;
+  animation: red-ani 6s ease;
+  animation-fill-mode: forwards;
+  }
+
+  .shape.orange {
+    background-color: #ff9e61;
+    animation: orange-ani 6s ease;
+   animation-fill-mode: forwards;
+  }
+
+  .shape.brown {
+    background-color: #967a59;
+    animation: brown-ani 6s ease;
+   animation-fill-mode: forwards;
+  }
+
+  @keyframes red-ani {
+    0% {transform: translate(0, 100%); opacity: 0;}
+    10% {opacity: 0.5;}
+    60% {transform: translate(40%, 140%); opacity: 0.5;}
+    80% {transform: translate(120%, 55%);opacity: 0.5;}
+    100% {transform-origin: 20% 30%;transform: scale(5); opacity: 0;}
+  }
+
+  @keyframes orange-ani {
+    0% {transform: translate(150%, -20%); opacity: 0;}
+    10% {opacity: 0.5;}
+    60% {transform: translate(120%, 0%); opacity: 0.5;}
+    80% {transform: translate(120%, 55%); opacity: 0.5;}
+    100% {transform-origin: 20% 30%;transform: scale(5); opacity: 0;}
+  }
+
+  @keyframes brown-ani {
+    0% {transform: translate(220%, 100%); opacity: 0;}
+    10% {opacity: 0.5;}
+    60% {transform: translate(200%, 140%); opacity: 0.5;}
+    80% {transform: translate(120%, 55%); opacity: 0.5;}
+    100% {transform-origin: 20% 30%;transform: scale(5); opacity: 0;}
+  }
+
+  @media only screen and (max-width: 768px) {
+  .intro-text {
+    font-size: 3em;
+    text-align: center;
+    margin: 0 2% 0 2%;
+    }
+
+    .shape {
+      position: absolute;
+      width: 30%;
+      height: 15%;
+      border-radius: 50%;
+    }
+
+    @keyframes red-ani {
+      0% {transform: translate(0, 400%); opacity: 0;}
+      10% {opacity: 0.5;}
+      60% {transform: translate(40%, 440%); opacity: 0.5;}
+      80% {transform: translate(120%, 255%);opacity: 0.5;}
+      100% {transform-origin: 35% 15%;transform: scale(10); opacity: 0;}
+    }
+  
+    @keyframes orange-ani {
+      0% {transform: translate(150%, 50%); opacity: 0;}
+      10% {opacity: 0.5;}
+      60% {transform: translate(120%, 70%); opacity: 0.5;}
+      80% {transform: translate(120%, 255%); opacity: 0.5;}
+      100% {transform-origin: 35% 15%;transform: scale(10); opacity: 0;}
+    }
+  
+    @keyframes brown-ani {
+      0% {transform: translate(220%, 400%); opacity: 0;}
+      10% {opacity: 0.5;}
+      60% {transform: translate(200%, 440%); opacity: 0.5;}
+      80% {transform: translate(120%, 255%); opacity: 0.5;}
+      100% {transform-origin: 35% 15%;transform: scale(10); opacity: 0;}
+    }
 }
