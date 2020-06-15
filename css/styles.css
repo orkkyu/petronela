@@ -144,7 +144,6 @@ p {
 #header2.small {
   height: 80px;
   background: rgba(248, 238, 231, 0.9);
-  /*border-bottom: solid 3px #967b59;*/
   z-index: 2;
 }
 
@@ -3912,7 +3911,7 @@ p.privacy-text.disclaimer {
     height: 100%;
     background-color: #f8eee7;
     z-index: 12;
-    animation: intro-cont-fade 6.2s ease;
+    animation: intro-cont-fade 5.2s ease;
     animation-fill-mode: forwards;
   }
 
@@ -3941,7 +3940,7 @@ p.privacy-text.disclaimer {
     color: #967959;
     font-size: 4em;
     text-align: center;
-    animation: intro-txt 4s ease;
+    animation: intro-txt 3.5s ease;
     animation-fill-mode: forwards;
     }
 
@@ -3961,19 +3960,19 @@ p.privacy-text.disclaimer {
 
   .shape.red {
   background-color: #ff6961;
-  animation: red-ani 6s ease;
+  animation: red-ani 5s ease;
   animation-fill-mode: forwards;
   }
 
   .shape.orange {
     background-color: #ff9e61;
-    animation: orange-ani 6s ease;
+    animation: orange-ani 5s ease;
    animation-fill-mode: forwards;
   }
 
   .shape.brown {
     background-color: #967a59;
-    animation: brown-ani 6s ease;
+    animation: brown-ani 5s ease;
    animation-fill-mode: forwards;
   }
 
@@ -4038,4 +4037,63 @@ p.privacy-text.disclaimer {
       80% {transform: translate(120%, 255%); opacity: 0.5;}
       100% {transform-origin: 35% 15%;transform: scale(10); opacity: 0;}
     }
+}
+
+.header.offer {
+  position: relative;
+  text-align: center;
+  background: #967959;
+  background: linear-gradient(60deg, rgba(90, 75, 57, 0.85) 0%, rgba(153, 67, 67, 0.85) 100%), 
+  url(../img/pasiulymas.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+.offer-heading-container {
+  display: flex;
+  justify-content: center;
+  margin: 48px;
+}
+
+.offer-heading {
+  font-family: 'Courgette', cursive;
+  color: #5E4D36;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.offer-row {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 10% 2% 10%;
+  justify-content: center;
+}
+
+.offer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-column.description {
+  background-color: #967a59;
+}
+
+.offer-image-container {
+  display: flex;
+  width: 550px;
+  background-color: #967a59;
+  border-radius: 50%;
+}
+
+.offer-image {
+  width: 100%;
+  background: url(../img/pasiulymas.jpg) no-repeat center center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.offer-desc {
+  color: #5E4D36;
+  font-size: 1.5em;
+  text-align: center;
 }
