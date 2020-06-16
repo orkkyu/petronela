@@ -178,28 +178,33 @@
      </div>
     <div class="offer-column-description">
       <div class="offer-desc first hidden one">Ciabatta su pomidorais ir pelėsiniu sūriu.</div>
-      <!--<hr class="offer-desc-line">-->
+</div>
 
       <div class="offer-juosta">
-        <div class="juostafix offer">
+        <div class="juostafix offer hidden-juosta">
           <div id="hdrgrad" class="juosta offer gradienthdr offer1"></div>
         </div>
       </div>
+      <div class="offer-column-description">
+      <div class="offer-desc hidden two twoo">Užsakymai priimami nuo 15vnt.</div>
+      </div>
 
-      <div class="offer-desc hidden two">Užsakymai priimami nuo 15vnt.</div>
-      
-      <div class="offer-juosta">
+      <div class="offer-juosta hidden-juosta two">
         <div class="juostafix offer">
           <div id="hdrgrad" class="juosta offer gradienthdr offer2"></div>
         </div>
       </div>
 
-      <div class="offer-desc price hidden three">0,60€/vnt.</div>
-    </div>
+      <div class="offer-column-description">
+        <div class="offer-desc price hidden three">0,60€/vnt.</div>
+      </div>
+      
+    
   </div>
 
   
     <div class="offer-image-container">
+      <span onclick="openModal();" class="slide-img-txt">Peržiūrėti</span>
       <div onclick="openModal();" class="offer-image"></div>
     </div>
 
@@ -213,6 +218,21 @@
       <img src="img/pasiulymas.jpg">
     </div>
     </div>
+  </div>
+
+
+  <div class="suggestion-col">
+    <div class="suggestion-row">
+
+      <div class="row-col1-cont">
+        <div class="row-col1">
+          
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
     
@@ -416,6 +436,25 @@ window.addEventListener('scroll', checkPosition);
 window.addEventListener('resize', hideit);
 hideit();
 checkPosition();})();
+
+(function() {
+var hiddenJuosta;
+var winHeight;
+function hideJuosta() {
+  hiddenJuosta = document.querySelectorAll('.hidden-juosta');
+  winHeight = window.innerHeight;}
+function checkPositionJuosta() {
+  for (var i = 0; i < hiddenJuosta.length; i++) {
+    var elmnt2 = hiddenJuosta[i];
+    var topoffset = hiddenJuosta[i].getBoundingClientRect().top;
+    if (topoffset - winHeight <= 0) {
+      elmnt2.classList.add('fade-scroll-juosta');
+      elmnt2.classList.remove('hidden-juosta');}
+  }}
+window.addEventListener('scroll', checkPositionJuosta);
+window.addEventListener('resize', hideJuosta);
+hideJuosta();
+checkPositionJuosta();})();
             </script>
         </body>
     
