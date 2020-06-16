@@ -129,23 +129,53 @@
 <section class="content-container">
 
 <div class="offer-heading-container">
-  <div class="offer-heading">Itališkas sumuštinis</div>
+  <div class="offer-heading">„Itališkas sumuštinis“</div>
+  <hr class="offer-heading-line">
 </div>
+
+
 
 <div class="offer-row">
 
-  <div class="offer-column description">
+  <div class="offer-column-cont">
+    <div class="offer-column-description">
+      <div class="offer-desc">Ciabatta su pomidorais ir pelėsiniu sūriu.</div>
+      <!--<hr class="offer-desc-line">-->
 
-    <div class="offer-desc">Ciabatta su pomidorais ir pelėsiniu sūriu.</div>
+      <div class="offer-juosta">
+        <div class="juostafix offer">
+          <div id="hdrgrad" class="juosta offer gradienthdr offer1"></div>
+        </div>
+      </div>
+
+      <div class="offer-desc hidden">Užsakymai priimami nuo 15vnt.</div>
+      
+      <div class="offer-juosta">
+        <div class="juostafix offer">
+          <div id="hdrgrad" class="juosta offer gradienthdr offer2"></div>
+        </div>
+      </div>
+
+      <div class="offer-desc price hidden">0,60€/vnt.</div>
+    </div>
   </div>
 
   
     <div class="offer-image-container">
-      <div class="offer-image"></div>
+      <div onclick="openModal();" class="offer-image"></div>
     </div>
 
 
 </div>
+
+<div id="gallery-popup" class="gallery-modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="gallery-full-content">
+    <div class="images">
+      <img src="img/pasiulymas.jpg">
+    </div>
+    </div>
+  </div>
 
     
 </section>
@@ -304,6 +334,14 @@ function closeNav() {
     showgrad.classList.remove("hide");
     hidecontacts.classList.remove("show");
 }
+function openModal() {
+    var popopen = document.getElementById("gallery-popup");
+    popopen.classList.add("open");
+    }
+  function closeModal() {
+    var popclose = document.getElementById("gallery-popup");
+    popclose.classList.remove("open");
+    }
  if (matchMedia) {
 const mq = window.matchMedia("(min-width: 769px)");
 mq.addListener(WidthFix);
@@ -322,6 +360,24 @@ if (mq.matches) {
     disableIntro.classList.add("disable");
     disableLogo.classList.add("disable");
     }, 5000);
+(function() {
+var hidden;
+var winHeight;
+function hideit() {
+  hidden = document.querySelectorAll('.hidden');
+  winHeight = window.innerHeight;}
+function checkPosition() {
+  for (var i = 0; i < hidden.length; i++) {
+    var elmnt = hidden[i];
+    var topoffset = hidden[i].getBoundingClientRect().top;
+    if (topoffset - winHeight <= 0) {
+      elmnt.classList.add('fade-scroll');
+      elmnt.classList.remove('hidden');}
+  }}
+window.addEventListener('scroll', checkPosition);
+window.addEventListener('resize', hideit);
+hideit();
+checkPosition();})();
             </script>
         </body>
     
