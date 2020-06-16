@@ -4084,8 +4084,9 @@ hr.offer-heading-line {
 .offer-column-cont {
   display: flex;
   flex-direction: column;
+  position: relative;
   background-color: #fff;
-  max-width: 500px;
+  max-width: 40%;
   margin-right: 3%;
   border-radius: 30px 30px 15px 15px;
   border: 7px dashed #9679596e;
@@ -4093,6 +4094,7 @@ hr.offer-heading-line {
 
 .offer-column-description {
   width: 100%;
+  height: 100%;
 }
 
 .offer-image-container {
@@ -4142,12 +4144,18 @@ hr.offer-heading-line {
   text-align: center;
   font-style: italic;
   padding: 48px 24px;
+  z-index: 1;
+}
+
+.offer-desc.first {
+  padding: 60px 24px 48px 24px;
 }
 
 .offer-desc.price {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 3em;
   font-style: normal;
+  padding: 48px 24px 60px 24px;
 }
 
 /*hr.offer-desc-line {
@@ -4165,8 +4173,7 @@ background-color: #967a59;
   justify-content: center;
   width: 100%;
   overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 40px;
+  margin: 24px 0;
 }
 
 .juosta.offer {
@@ -4177,6 +4184,7 @@ background-color: #967a59;
 
 .juostafix.offer {
   width: 50%;
+  z-index: 1;
 }
 .gradienthdr.offer1 {
   background: linear-gradient(to right, #ff6961, #ff9e61, #ff9e61, #967959,#967959, #ff6961);
@@ -4186,6 +4194,29 @@ background-color: #967a59;
   background: linear-gradient(to left, #ff6961, #ff9e61, #ff9e61, #967959,#967959, #ff6961);
 }
 
+#offer-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0.12;
+}
+
+#offer-svg path {
+  fill: #a78e70;
+}
+
+.fade-scroll.one {
+  opacity: 0;
+  animation-delay: 5.2s;
+}
+
+.fade-scroll.three {
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
 @media only screen and (max-width: 1024px) {
   .offer-row {
     flex-direction: column;
@@ -4193,6 +4224,35 @@ background-color: #967a59;
   }
 
   .offer-column-cont {
+    max-width: 80%;
+    /*min-height: 550px;*/
+    margin: 0 0 4% 0;
+  }
+
+  .offer-image-container {
+    margin: 4% 0 0 0;
+  }
+
+  .offer-desc {
+    font-size: 1.7em;
+    padding: 48px 24px;
+  }
+  
+  .offer-desc.price {
+    font-size: 3.6em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .offer-image-container {
+    width: 500px;
     min-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .offer-image-container {
+    width: 310px;
+    min-height: 310px;
   }
 }
