@@ -459,12 +459,13 @@ if (mq.matches) {
 } else {
   document.getElementById("hmbrnav").style.width = "0%";}
   } 
-  setTimeout(function() {
-    var disableIntro = document.getElementById("intro-cont");
-    var disableLogo = document.getElementById("intro-logo");
-    disableIntro.classList.add("disable");
-    disableLogo.classList.add("disable");
-    }, 5000);
+setTimeout(function() {
+var disableIntro = document.getElementById("intro-cont");
+var disableLogo = document.getElementById("intro-logo");
+disableIntro.classList.add("disable");
+disableLogo.classList.add("disable");
+}, 3400);
+
 (function() {
 var hidden;
 var winHeight;

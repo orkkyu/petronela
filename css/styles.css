@@ -4055,8 +4055,8 @@ p.privacy-text.disclaimer {
     height: 100%;
     background-color: #f8eee7;
     z-index: 12;
-    -webkit-animation: intro-cont-fade 5.2s ease;
-            animation: intro-cont-fade 5.2s ease;
+    -webkit-animation: intro-cont-fade 3.5s ease;
+            animation: intro-cont-fade 3.5s ease;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
@@ -4099,8 +4099,8 @@ p.privacy-text.disclaimer {
     color: #967959;
     font-size: 4em;
     text-align: center;
-    -webkit-animation: intro-txt 3.5s ease;
-            animation: intro-txt 3.5s ease;
+    -webkit-animation: intro-txt 2s ease;
+            animation: intro-txt 2s ease;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     }
@@ -4128,24 +4128,24 @@ p.privacy-text.disclaimer {
 
   .shape.red {
   background-color: #ff6961;
-  -webkit-animation: red-ani 5s ease;
-          animation: red-ani 5s ease;
+  -webkit-animation: red-ani 3.5s ease;
+          animation: red-ani 3.5s ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   }
 
   .shape.orange {
     background-color: #ff9e61;
-    -webkit-animation: orange-ani 5s ease;
-            animation: orange-ani 5s ease;
+    -webkit-animation: orange-ani 3.5s ease;
+            animation: orange-ani 3.5s ease;
    -webkit-animation-fill-mode: forwards;
            animation-fill-mode: forwards;
   }
 
   .shape.brown {
     background-color: #967a59;
-    -webkit-animation: brown-ani 5s ease;
-            animation: brown-ani 5s ease;
+    -webkit-animation: brown-ani 3.5s ease;
+            animation: brown-ani 3.5s ease;
    -webkit-animation-fill-mode: forwards;
            animation-fill-mode: forwards;
   }
@@ -4496,14 +4496,14 @@ hr.offer-heading-line {
 
 .fade-scroll.one {
   opacity: 0;
-  -webkit-animation-delay: 5.2s;
-          animation-delay: 5.2s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 
 .fade-scroll.three {
   opacity: 0;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 @-webkit-keyframes fade-in-juosta {
@@ -4522,8 +4522,8 @@ hr.offer-heading-line {
 
 .fade-scroll-juosta.two {
   opacity: 0;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .fade-scroll-juosta {
@@ -4710,7 +4710,7 @@ opacity: 0.6;
 .col-text-cont {
   width: 100%;
   padding: 2%;
-  margin: 2% 0 4% 0;
+  margin: 2% 0 10% 0;
 }
 
 .col-text {
@@ -4815,7 +4815,7 @@ opacity: 0.6;
   }
 
   .col-text-cont {
-    margin: 8% 0 5% 0;
+    margin: 8% 0 10% 0;
   }
 }
 
